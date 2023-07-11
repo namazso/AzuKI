@@ -4,7 +4,7 @@
 
 1. Download your public certificate from Azure:
 
-    ![Azure Download PFX](https://github.com/namazso/AzuKI/assets/8676443/51a901e1-b024-4fb8-b98a-c511612c0ba3)
+    ![Azure Download PFX](https://github.com/namazso/AzuKI/assets/8676443/f92069dd-b12f-47af-ae53-f2e6831eaae4)
 
     Note that this will contain your private key too unless you imported or generated it as unexportable. In this case, import into your store and export only the public key.
 
