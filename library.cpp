@@ -252,7 +252,7 @@ extern "C" __declspec(dllexport) HRESULT WINAPI AuthenticodeDigestSign(
   const auto decoded = b64::decode(value);
   const auto decoded_size = decoded.size();
 
-  const auto sig_buf = (unsigned char*)LocalAlloc(LMEM_ZEROINIT, decoded_size);
+  const auto sig_buf = (unsigned char*)HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, decoded_size);
   memcpy(sig_buf, decoded.data(), decoded_size);
 
   pSignedDigest->cbData = decoded_size;
